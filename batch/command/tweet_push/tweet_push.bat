@@ -38,6 +38,11 @@ for /f "tokens=1,2" %%f in (%temp_file_name%) do (
  )
 )
 
+if not "%temp_file_name%"=="" (
+ del %temp_file_name%
+)
+
+
 rem ツイート内容取得
 set /p tweet_status=ツイート内容：　
 
@@ -68,9 +73,9 @@ rem git push
 rem 動かないよ
 cd
 if "%errorlevel%"=="0" (
- echo remote：%remote_url%/branch：%branch%/comment：%tweet_status%
- set tweet=[remote:%remote_url%][branch:%branch%][comment:%tweet_status%]
- twurl -d 'status=%tweet%' /1.1/statuses/update.json
+ set tweet_message=[remote: %remote_url% ] [branch: %branch%] [comment: %tweet_status%]
+ echo !tweet_message!
+ twurl -r 'status=!tweet_message!' /1.1/statuses/update.json
 )
 
 
