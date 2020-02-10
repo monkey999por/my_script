@@ -68,30 +68,10 @@ if "%is_tweet_and_git_push%"=="n" (
 
 
 :Git
-rem ‚Ù‚ñ‚Æ‚Í‰üs‚µ‚½‚©‚Á‚½‚¯‚Ç‚â‚è•û‚í‚©‚ç‚È‚¢‚µ‚±‚ê‚Å‚¢‚¢‚â
-rem git push
-rem “®‚©‚È‚¢‚æ
-cd
+git push
+
 if "%errorlevel%"=="0" (
  set tweet_message=[remote: %remote_url% ] [branch: %branch%] [comment: %tweet_status%]
  echo !tweet_message!
  twurl -r 'status=!tweet_message!' /1.1/statuses/update.json
 )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
