@@ -10,7 +10,7 @@ rem branch
 rem ツイート内容
 
 rem ここはgit repositoryですか？
-git fetch
+git status
 if not "%errorlevel%"=="0" (
  echo gitリポジトリで実行してください
  exit /b 1
@@ -69,6 +69,9 @@ if "%is_tweet_and_git_push%"=="n" (
 
 :Git
 git push
+if not "%errorlevel%"=="0" (
+ git push --set-upstream origin %branch%
+)
 
 if "%errorlevel%"=="0" (
  set tweet_message=[remote: %remote_url% ] [branch: %branch%] [comment: %tweet_status%]
