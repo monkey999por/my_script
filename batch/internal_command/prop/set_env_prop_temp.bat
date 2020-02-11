@@ -2,8 +2,10 @@
 setlocal
 
 rem プロパティファイルの読み込み
+rem %1: group
+rem %2: key(prop)
 
-set "main_properties_path=.\..\props\main.properties"
+set "main_properties_path=.\..\..\props\main.properties"
 set "group=%1"
 set "key=%2"
 set "MY_LOCAL_SCRIPT_PROP="
