@@ -70,6 +70,7 @@ if "%is_tweet_and_git_push%"=="n" (
 :Git
 git push
 if not "%errorlevel%"=="0" (
+ cls
  git push --set-upstream origin %branch%
 )
 
@@ -78,3 +79,11 @@ if "%errorlevel%"=="0" (
  echo !tweet_message!
  twurl -r 'status=!tweet_message!' /1.1/statuses/update.json
 )
+
+echo.
+echo remote: %remote_url%
+echo branch: %branch%
+echo tweet: %tweet_status%
+echo ツイートと$git pushが完了しました
+
+
