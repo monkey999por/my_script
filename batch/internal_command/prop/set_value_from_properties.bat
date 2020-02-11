@@ -1,14 +1,18 @@
 @echo off
+
+set "MY_LOCAL_SCRIPT_PROP="
+
 setlocal
 
-rem プロパティファイルの読み込み
+rem プロパティファイルを読み込み、該当するグループ、キーの値をアプリケーションで使用する変数（MY_LOCAL_SCRIPT_PROP）に設定する。
+rem 引数
 rem %1: group
 rem %2: key(prop)
 
 set "main_properties_path=.\..\..\props\main.properties"
 set "group=%1"
 set "key=%2"
-set "MY_LOCAL_SCRIPT_PROP="
+
 
 if "%group%"=="" (
  echo グループ名（$group）が指定されていません。
@@ -29,7 +33,7 @@ for /f "tokens=1,2 delims==" %%f in (%main_properties_path%) do (
  )
  
  if "%group%"=="!group_name!" (
-  set "read_flg=0"_
+  set "read_flg=0"
  )else (
   set "read_flg=1"
  )
@@ -38,7 +42,7 @@ for /f "tokens=1,2 delims==" %%f in (%main_properties_path%) do (
   if not "!prop:~0,1!"=="$" if not "!prop:~0,1!"=="#" (
    if "%key%"=="!prop!" (
     set "MY_LOCAL_SCRIPT_PROP=!value!"
-    goto :SetProp
+    goto :SetProp 
    )
   )
  )
