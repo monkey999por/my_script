@@ -1,7 +1,18 @@
 @echo off
+pushd "%~dp0"
+rem ŠÂ‹«•Ï”(å‚ÉƒpƒXŒn)İ’è
+
+for /f "delims=" %%s in (.\props\env_path.sete) do (
+ %%s
+ echo %%s
+)
+
+echo %start_page%
+exit /b 0
+
 setlocal
 
-pushd "%~dp0"
+
 
 rem $mls %command_name% &command_option...&
 rem args
