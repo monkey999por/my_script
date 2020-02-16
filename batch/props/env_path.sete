@@ -1,2 +1,0 @@
-set current_path=C:\develop\my_script\batch
-set start_page=%current_path%\help\hello_mls.bat
