@@ -19,6 +19,7 @@ call %start_page%
 rem 引数チェック
 if "%1"=="" (
  echo コマンド名を指定してください
+ popd
  exit /b 1
 )
 
