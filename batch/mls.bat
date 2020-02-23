@@ -14,21 +14,36 @@ rem command
 rem options...(for %command%)
 
 rem スタートページ
-call %start_page%
+rem call %start_page%
 
 rem 引数チェック
 if "%1"=="" (
+ call %start_page%
  echo コマンド名を指定してください
  popd
  exit /b 1
 )
 
+rem コマンド存在チェック
+for /f %%i in ('dir /b %command_path%') do (
+ if "%1"=="%%i" (
+  set "is_exist_command=true"
+  call :Run %*
+ ) else (
+  exit /b 1
+ )
+ 
+)
 
-set "command=%1"
-
-
-
-
+:Run
+rem カスタムコマンド実行
+setlocal ENABLEDELAYEDEXPANSION
+for /f "tokens=1*" %%i in ("%*") do (
+ if "%is_exist_command%"=="true" (
+  call %command_path%\%%i\%%i.bat %%j
+ )
+ 
+)
 
 popd
 
