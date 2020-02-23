@@ -25,20 +25,22 @@ if "%1"=="" (
 )
 
 rem コマンド存在チェック
-for /f %%i in ('dir /b %command_path%') do (
+set "my_temp=%temp%\temp_mls.txt"
+dir /b %command_path% > %my_temp%
+	
+setlocal ENABLEDELAYEDEXPANSION
+for /f %%i in (%my_temp%) do (
  if "%1"=="%%i" (
   set "is_exist_command=true"
   call :Run %*
- ) else (
-  echo コマンドが存在しません
-  exit /b 1
- )
- 
+ ) 
 )
+
+echo コマンドが存在しません
+exit /b 1
 
 :Run
 rem カスタムコマンド実行
-setlocal ENABLEDELAYEDEXPANSION
 for /f "tokens=1*" %%i in ("%*") do (
  if "%is_exist_command%"=="true" (
   call %command_path%\%%i\%%i.bat %%j
@@ -47,6 +49,3 @@ for /f "tokens=1*" %%i in ("%*") do (
 )
 
 popd
-
-
-
