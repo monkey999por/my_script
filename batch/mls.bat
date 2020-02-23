@@ -30,6 +30,7 @@ for /f %%i in ('dir /b %command_path%') do (
   set "is_exist_command=true"
   call :Run %*
  ) else (
+  echo ƒRƒ}ƒ“ƒh‚ª‘¶İ‚µ‚Ü‚¹‚ñ
   exit /b 1
  )
  
