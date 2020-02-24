@@ -33,6 +33,7 @@ for /f %%i in (%my_temp%) do (
  if "%1"=="%%i" (
   set "is_exist_command=true"
   call :Run %*
+  exit /b 0
  ) 
 )
 
