@@ -1,13 +1,14 @@
 @echo off
 rem カレントディレクトリ
 set "this=%cd%"
+
 echo %this%
 pushd "%~dp0" 
 rem 環境変数(主にパス系)設定
 
 call .\props\env_path_set.bat
 
-setlocal
+
 rem $mls %command_name% &command_option...&
 rem args
 rem command
@@ -24,6 +25,8 @@ if "%1"=="" (
  exit /b 1
 )
 
+
+setlocal
 rem コマンド存在チェック
 set "my_temp=%temp%\temp_mls.txt"
 dir /b %command_path% > %my_temp%
@@ -33,12 +36,13 @@ for /f %%i in (%my_temp%) do (
  if "%1"=="%%i" (
   set "is_exist_command=true"
   call :Run %*
-  cd %this%
+  endlocal & endlocal & cd %this%
   exit /b 0
  ) 
 )
 
 echo コマンドが存在しません
+endlocal & endlocal & cd %this%
 exit /b 1
 
 :Run
@@ -48,5 +52,7 @@ for /f "tokens=1*" %%i in ("%*") do (
   call %command_path%\%%i\%%i.bat %%j  
  )
 )
-pushd %this%
-echo %this%
+
+
+
+endlocal & endlocal & cd %this%
