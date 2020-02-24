@@ -17,6 +17,7 @@ rem options...(for %command%)
 rem スタートページ
 rem call %start_page%
 
+
 rem 引数チェック
 if "%1"=="" (
  call %start_page%
