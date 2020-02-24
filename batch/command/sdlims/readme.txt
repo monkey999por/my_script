@@ -1,0 +1,2 @@
+“®‚«‚Ü‚¹‚ñ
+powershell‚Å‚»‚Á‚¿‚Åì‚è‚½‚¢‚©‚à
