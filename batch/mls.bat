@@ -1,21 +1,15 @@
 @echo off
 rem カレントディレクトリ
-set "this=%cd%"
-
-echo %this%
+@set "this=%cd%"
 pushd "%~dp0" 
+
 rem 環境変数(主にパス系)設定
-
 call .\props\env_path_set.bat
-
 
 rem $mls %command_name% &command_option...&
 rem args
 rem command
 rem options...(for %command%)
-
-rem スタートページ
-rem call %start_page%
 
 
 rem 引数チェック
@@ -25,7 +19,6 @@ if "%1"=="" (
  cd %this%
  exit /b 1
 )
-
 
 setlocal
 rem コマンド存在チェック
@@ -48,12 +41,15 @@ exit /b 1
 
 :Run
 rem カスタムコマンド実行
-for /f "tokens=1*" %%i in ("%*") do (
+rem 引数を一度ファイルに書き出して、それをforステートメントに渡す
+rem ⇒こうしないとfor分の引数の関係でダブルクォーテーション付き引数がうまく認識されない
+del %temp%\mls_run.txt
+echo %* > %temp%\mls_run.txt
+
+for /f "tokens=1* delims= " %%i in (%temp%\mls_run.txt) do (
  if "%is_exist_command%"=="true" (
   call %command_path%\%%i\%%i.bat %%j  
  )
 )
-
-
 
 endlocal & endlocal & cd %this%
