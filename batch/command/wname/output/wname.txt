@@ -3,7 +3,6 @@ C:\Windows\System32\format.com
 C:\Windows\System32\mode.com
 C:\Windows\System32\more.com
 C:\Windows\System32\tree.com
-C:\Windows\System32\agentactivationruntimestarter.exe
 C:\Windows\System32\aitstatic.exe
 C:\Windows\System32\alg.exe
 C:\Windows\System32\AppHostRegistrationVerifier.exe
@@ -64,6 +63,7 @@ C:\Windows\System32\ClipRenew.exe
 C:\Windows\System32\ClipUp.exe
 C:\Windows\System32\CloudExperienceHostBroker.exe
 C:\Windows\System32\CloudNotifications.exe
+C:\Windows\System32\CloudStorageWizard.exe
 C:\Windows\System32\cmd.exe
 C:\Windows\System32\cmdkey.exe
 C:\Windows\System32\cmdl32.exe
@@ -83,7 +83,6 @@ C:\Windows\System32\control.exe
 C:\Windows\System32\convert.exe
 C:\Windows\System32\convertvhd.exe
 C:\Windows\System32\coredpussvr.exe
-C:\Windows\System32\CredentialEnrollmentManager.exe
 C:\Windows\System32\CredentialUIBroker.exe
 C:\Windows\System32\credwiz.exe
 C:\Windows\System32\cscript.exe
@@ -92,7 +91,7 @@ C:\Windows\System32\ctfmon.exe
 C:\Windows\System32\cttune.exe
 C:\Windows\System32\cttunesvr.exe
 C:\Windows\System32\curl.exe
-C:\Windows\System32\CustomInstallExec.exe
+C:\Program Files\curl-7.65.1-win64-mingw\bin\curl.exe
 C:\Windows\System32\dasHost.exe
 C:\Windows\System32\DataExchangeHost.exe
 C:\Windows\System32\DataStoreCacheDumpTool.exe
@@ -101,7 +100,6 @@ C:\Windows\System32\dccw.exe
 C:\Windows\System32\dcomcnfg.exe
 C:\Windows\System32\ddodiag.exe
 C:\Windows\System32\Defrag.exe
-C:\Windows\System32\deploymentcsphelper.exe
 C:\Windows\System32\desktopimgdownldr.exe
 C:\Windows\System32\DeviceCensus.exe
 C:\Windows\System32\DeviceCredentialDeployment.exe
@@ -112,7 +110,7 @@ C:\Windows\System32\DeviceProperties.exe
 C:\Windows\System32\DFDWiz.exe
 C:\Windows\System32\dfrgui.exe
 C:\Windows\System32\dialer.exe
-C:\Windows\System32\directxdatabaseupdater.exe
+C:\Windows\System32\difx64.exe
 C:\Windows\System32\diskpart.exe
 C:\Windows\System32\diskperf.exe
 C:\Windows\System32\diskraid.exe
@@ -133,6 +131,8 @@ C:\Windows\System32\doskey.exe
 C:\Windows\System32\dpapimig.exe
 C:\Windows\System32\DpiScaling.exe
 C:\Windows\System32\dpnsvr.exe
+C:\Windows\System32\DPTopologyApp.exe
+C:\Windows\System32\DPTopologyAppv2_0.exe
 C:\Windows\System32\driverquery.exe
 C:\Windows\System32\drvcfg.exe
 C:\Windows\System32\drvinst.exe
@@ -188,17 +188,17 @@ C:\Windows\System32\GameBarPresenceWriter.exe
 C:\Windows\System32\GamePanel.exe
 C:\Windows\System32\GenValObj.exe
 C:\Windows\System32\getmac.exe
+C:\Windows\System32\GfxUIEx.exe
+C:\Windows\System32\Gfxv2_0.exe
+C:\Windows\System32\Gfxv4_0.exe
 C:\Windows\System32\gpresult.exe
 C:\Windows\System32\gpupdate.exe
 C:\Windows\System32\grpconv.exe
 C:\Windows\System32\hdwwiz.exe
 C:\Windows\System32\help.exe
-C:\Windows\System32\HolographicBenchmark.exe
 C:\Windows\System32\HOSTNAME.EXE
-C:\Windows\System32\HPMUIDir.exe
 C:\Windows\System32\hvax64.exe
 C:\Windows\System32\hvix64.exe
-C:\Windows\System32\ibtsiva.exe
 C:\Windows\System32\icacls.exe
 C:\Windows\System32\IcsEntitlementHost.exe
 C:\Windows\System32\icsunattend.exe
@@ -206,15 +206,22 @@ C:\Windows\System32\ie4uinit.exe
 C:\Windows\System32\ie4ushowIE.exe
 C:\Windows\System32\ieUnatt.exe
 C:\Windows\System32\iexpress.exe
+C:\Windows\System32\igfxCUIService.exe
+C:\Windows\System32\igfxEM.exe
+C:\Windows\System32\igfxext.exe
+C:\Windows\System32\igfxHK.exe
+C:\Windows\System32\igfxSDK.exe
+C:\Windows\System32\igfxTray.exe
 C:\Windows\System32\immersivetpmvscmgrsvr.exe
 C:\Windows\System32\InfDefaultInstall.exe
-C:\Windows\System32\InputSwitchToastHandler.exe
+C:\Windows\System32\IntelCpHDCPSvc.exe
 C:\Windows\System32\ipconfig.exe
+C:\Windows\System32\irftp.exe
 C:\Windows\System32\iscsicli.exe
 C:\Windows\System32\iscsicpl.exe
 C:\Windows\System32\isoburn.exe
 C:\Windows\System32\klist.exe
-C:\Program Files\Java\jdk-10.0.2\bin\klist.exe
+C:\Program Files\Java\jdk1.8.0_211\bin\klist.exe
 C:\Windows\System32\ksetup.exe
 C:\Windows\System32\ktmutil.exe
 C:\Windows\System32\label.exe
@@ -251,18 +258,15 @@ C:\Windows\System32\MDMAppInstaller.exe
 C:\Windows\System32\MdmDiagnosticsTool.exe
 C:\Windows\System32\MdRes.exe
 C:\Windows\System32\MdSched.exe
-C:\Windows\System32\mfevtps.exe
 C:\Windows\System32\mfpmp.exe
 C:\Windows\System32\MicrosoftEdgeBCHost.exe
 C:\Windows\System32\MicrosoftEdgeCP.exe
 C:\Windows\System32\MicrosoftEdgeDevTools.exe
 C:\Windows\System32\MicrosoftEdgeSH.exe
-C:\Windows\System32\mitigationscanner.exe
 C:\Windows\System32\mmc.exe
 C:\Windows\System32\mmgaserver.exe
 C:\Windows\System32\mobsync.exe
 C:\Windows\System32\mountvol.exe
-C:\Windows\System32\mousocoreworker.exe
 C:\Windows\System32\mpnotify.exe
 C:\Windows\System32\MpSigStub.exe
 C:\Windows\System32\MRINFO.EXE
@@ -288,7 +292,6 @@ C:\Windows\System32\MusNotifyIcon.exe
 C:\Windows\System32\Narrator.exe
 C:\Windows\System32\nbtstat.exe
 C:\Windows\System32\ndadmin.exe
-C:\Windows\System32\NDKPing.exe
 C:\Windows\System32\net.exe
 C:\Windows\System32\net1.exe
 C:\Windows\System32\netbtugc.exe
@@ -324,6 +327,7 @@ C:\Windows\System32\PATHPING.EXE
 C:\Windows\System32\pcalua.exe
 C:\Windows\System32\pcaui.exe
 C:\Windows\System32\pcwrun.exe
+C:\Windows\System32\PerceptionSimulationDevice.exe
 C:\Windows\System32\perfmon.exe
 C:\Windows\System32\phoneactivate.exe
 C:\Windows\System32\PickerHost.exe
@@ -335,7 +339,6 @@ C:\Windows\System32\plasrv.exe
 C:\Windows\System32\PnPUnattend.exe
 C:\Windows\System32\pnputil.exe
 C:\Windows\System32\poqexec.exe
-C:\Windows\System32\pospaymentsworker.exe
 C:\Windows\System32\powercfg.exe
 C:\Windows\System32\PresentationHost.exe
 C:\Windows\System32\prevhost.exe
@@ -361,6 +364,7 @@ C:\Windows\System32\RdpSa.exe
 C:\Windows\System32\RdpSaProxy.exe
 C:\Windows\System32\RdpSaUacHelper.exe
 C:\Windows\System32\rdrleakdiag.exe
+C:\Windows\System32\RDSPnf.exe
 C:\Windows\System32\ReAgentc.exe
 C:\Windows\System32\recdisc.exe
 C:\Windows\System32\recover.exe
@@ -408,7 +412,6 @@ C:\Windows\System32\SearchProtocolHost.exe
 C:\Windows\System32\SecEdit.exe
 C:\Windows\System32\secinit.exe
 C:\Windows\System32\securekernel.exe
-C:\Windows\System32\SecurityHealthHost.exe
 C:\Windows\System32\SecurityHealthService.exe
 C:\Windows\System32\SecurityHealthSystray.exe
 C:\Windows\System32\SensorDataService.exe
@@ -450,8 +453,6 @@ C:\Windows\System32\subst.exe
 C:\Windows\System32\svchost.exe
 C:\Windows\System32\sxstrace.exe
 C:\Windows\System32\SyncHost.exe
-C:\Windows\System32\SynTPEnh.exe
-C:\Windows\System32\SynTPEnhService.exe
 C:\Windows\System32\SysResetErr.exe
 C:\Windows\System32\systeminfo.exe
 C:\Windows\System32\SystemPropertiesAdvanced.exe
@@ -506,8 +507,6 @@ C:\Windows\System32\UserAccountBroker.exe
 C:\Windows\System32\UserAccountControlSettings.exe
 C:\Windows\System32\userinit.exe
 C:\Windows\System32\UsoClient.exe
-C:\Windows\System32\usocoreworker.exe
-C:\Windows\System32\UtcDecoderHost.exe
 C:\Windows\System32\Utilman.exe
 C:\Windows\System32\VaultCmd.exe
 C:\Windows\System32\vds.exe
@@ -517,14 +516,13 @@ C:\Windows\System32\verifier.exe
 C:\Windows\System32\verifiergui.exe
 C:\Windows\System32\vssadmin.exe
 C:\Windows\System32\VSSVC.exe
-C:\Windows\System32\vulkaninfo-1-1-1-70-1.exe
-C:\Windows\System32\vulkaninfo.exe
 C:\Windows\System32\w32tm.exe
 C:\Windows\System32\WaaSMedicAgent.exe
 C:\Windows\System32\waitfor.exe
 C:\Windows\System32\WallpaperHost.exe
 C:\Windows\System32\wbadmin.exe
 C:\Windows\System32\wbengine.exe
+C:\Windows\System32\WebCache.exe
 C:\Windows\System32\wecutil.exe
 C:\Windows\System32\WerFault.exe
 C:\Windows\System32\WerFaultSecure.exe
@@ -549,7 +547,6 @@ C:\Windows\System32\winlogon.exe
 C:\Windows\System32\winresume.exe
 C:\Windows\System32\winrs.exe
 C:\Windows\System32\winrshost.exe
-C:\Windows\System32\WinRTNetMUAHostServer.exe
 C:\Windows\System32\WinSAT.exe
 C:\Windows\System32\winver.exe
 C:\Windows\System32\wkspbroker.exe
@@ -583,6 +580,9 @@ C:\Windows\System32\XblGameSaveTask.exe
 C:\Windows\System32\xcopy.exe
 C:\Windows\System32\xpsrchvw.exe
 C:\Windows\System32\xwizard.exe
+C:\Windows\System32\SupportTool.exe.bat
+C:\Windows\System32\{A6D608F0-0BDE-491A-97AE-5C4B05D86E01}.bat
+C:\Windows\System32\{EC94D02F-D200-4428-9531-05AF7F9799CB}.bat
 C:\Windows\System32\winrm.cmd
 C:\Windows\System32\gatherNetworkInfo.vbs
 C:\Windows\System32\slmgr.vbs
@@ -608,12 +608,10 @@ C:\Windows\bfsvc.exe
 C:\Windows\explorer.exe
 C:\Windows\HelpPane.exe
 C:\Windows\hh.exe
-C:\Windows\HPCUST1.exe
-C:\Windows\HPCUST2.exe
 C:\Windows\System32\notepad.exe
 C:\Windows\notepad.exe
 C:\Windows\regedit.exe
-C:\Windows\SetupAfterRebootService.exe
+C:\Windows\RtkBtManServ.exe
 C:\Windows\splwow64.exe
 C:\Windows\winhlp32.exe
 C:\Windows\System32\write.exe
@@ -636,118 +634,3 @@ C:\Windows\System32\OpenSSH\ssh-agent.exe
 C:\Windows\System32\OpenSSH\ssh-keygen.exe
 C:\Windows\System32\OpenSSH\ssh-keyscan.exe
 C:\Windows\System32\OpenSSH\ssh.exe
-C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL\jhi_service.exe
-C:\Program Files\Java\jdk-10.0.2\bin\appletviewer.exe
-C:\Program Files\Java\jdk-10.0.2\bin\idlj.exe
-C:\Program Files\Java\jdk-10.0.2\bin\jabswitch.exe
-C:\Program Files\Java\jdk-10.0.2\bin\jaccessinspector.exe
-C:\Program Files\Java\jdk-10.0.2\bin\jaccesswalker.exe
-C:\Program Files\Java\jdk-10.0.2\bin\jaotc.exe
-C:\Program Files\Java\jdk-10.0.2\bin\jar.exe
-C:\Program Files\Java\jdk-10.0.2\bin\jarsigner.exe
-C:\Program Files\Java\jdk-10.0.2\bin\java.exe
-C:\Program Files\Java\jdk-10.0.2\bin\javac.exe
-C:\Program Files\Java\jdk-10.0.2\bin\javacpl.exe
-C:\Program Files\Java\jdk-10.0.2\bin\javadoc.exe
-C:\Program Files\Java\jdk-10.0.2\bin\javap.exe
-C:\Program Files\Java\jdk-10.0.2\bin\javapackager.exe
-C:\Program Files\Java\jdk-10.0.2\bin\javaw.exe
-C:\Program Files\Java\jdk-10.0.2\bin\javaws.exe
-C:\Program Files\Java\jdk-10.0.2\bin\jcmd.exe
-C:\Program Files\Java\jdk-10.0.2\bin\jconsole.exe
-C:\Program Files\Java\jdk-10.0.2\bin\jdb.exe
-C:\Program Files\Java\jdk-10.0.2\bin\jdeprscan.exe
-C:\Program Files\Java\jdk-10.0.2\bin\jdeps.exe
-C:\Program Files\Java\jdk-10.0.2\bin\jhsdb.exe
-C:\Program Files\Java\jdk-10.0.2\bin\jimage.exe
-C:\Program Files\Java\jdk-10.0.2\bin\jinfo.exe
-C:\Program Files\Java\jdk-10.0.2\bin\jjs.exe
-C:\Program Files\Java\jdk-10.0.2\bin\jlink.exe
-C:\Program Files\Java\jdk-10.0.2\bin\jmap.exe
-C:\Program Files\Java\jdk-10.0.2\bin\jmc.exe
-C:\Program Files\Java\jdk-10.0.2\bin\jmod.exe
-C:\Program Files\Java\jdk-10.0.2\bin\jps.exe
-C:\Program Files\Java\jdk-10.0.2\bin\jrunscript.exe
-C:\Program Files\Java\jdk-10.0.2\bin\jshell.exe
-C:\Program Files\Java\jdk-10.0.2\bin\jstack.exe
-C:\Program Files\Java\jdk-10.0.2\bin\jstat.exe
-C:\Program Files\Java\jdk-10.0.2\bin\jstatd.exe
-C:\Program Files\Java\jdk-10.0.2\bin\jweblauncher.exe
-C:\Program Files\Java\jdk-10.0.2\bin\keytool.exe
-C:\Program Files\Java\jdk-10.0.2\bin\kinit.exe
-C:\Windows\System32\klist.exe
-C:\Program Files\Java\jdk-10.0.2\bin\klist.exe
-C:\Program Files\Java\jdk-10.0.2\bin\ktab.exe
-C:\Program Files\Java\jdk-10.0.2\bin\orbd.exe
-C:\Program Files\Java\jdk-10.0.2\bin\pack200.exe
-C:\Program Files\Java\jdk-10.0.2\bin\rmic.exe
-C:\Program Files\Java\jdk-10.0.2\bin\rmid.exe
-C:\Program Files\Java\jdk-10.0.2\bin\rmiregistry.exe
-C:\Program Files\Java\jdk-10.0.2\bin\schemagen.exe
-C:\Program Files\Java\jdk-10.0.2\bin\serialver.exe
-C:\Program Files\Java\jdk-10.0.2\bin\servertool.exe
-C:\Program Files\Java\jdk-10.0.2\bin\ssvagent.exe
-C:\Program Files\Java\jdk-10.0.2\bin\tnameserv.exe
-C:\Program Files\Java\jdk-10.0.2\bin\unpack200.exe
-C:\Program Files\Java\jdk-10.0.2\bin\wsgen.exe
-C:\Program Files\Java\jdk-10.0.2\bin\wsimport.exe
-C:\Program Files\Java\jdk-10.0.2\bin\xjc.exe
-C:\Program Files\Git\cmd\git-gui.exe
-C:\Program Files\Git\cmd\git-lfs.exe
-C:\Program Files\Git\cmd\git.exe
-C:\Program Files\Git\cmd\gitk.exe
-C:\Program Files\Git\cmd\start-ssh-agent.cmd
-C:\Program Files\Git\cmd\start-ssh-pageant.cmd
-C:\Program Files\nodejs\node.exe
-C:\Program Files\nodejs\install_tools.bat
-C:\Program Files\nodejs\nodevars.bat
-C:\Program Files\nodejs\npm.cmd
-C:\Program Files\nodejs\npx.cmd
-C:\Program Files\Intel\WiFi\bin\cpappletexe.exe
-C:\Program Files\Intel\WiFi\bin\EvtEng.exe
-C:\Program Files\Intel\WiFi\bin\iconvrtr.exe
-C:\Program Files\Intel\WiFi\bin\iWrap.exe
-C:\Program Files\Intel\WiFi\bin\PanDhcpDns.exe
-C:\Program Files\Intel\WiFi\bin\ZeroConfigService.exe
-C:\Program Files\Common Files\Intel\WirelessCommon\RegSrvc.exe
-C:\Program Files (x86)\sakura\sakura.exe
-C:\Program Files (x86)\sakura\unins000.exe
-C:\Program Files\TortoiseGit\bin\GitWCRev.exe
-C:\Program Files\TortoiseGit\bin\GitWCRevCOM.exe
-C:\Program Files\TortoiseGit\bin\notepad2.exe
-C:\Program Files\TortoiseGit\bin\pageant.exe
-C:\Program Files\TortoiseGit\bin\puttygen.exe
-C:\Program Files\TortoiseGit\bin\sendrpt.exe
-C:\Program Files\TortoiseGit\bin\sshaskpass.exe
-C:\Program Files\TortoiseGit\bin\TGitCache.exe
-C:\Program Files\TortoiseGit\bin\tgittouch.exe
-C:\Program Files\TortoiseGit\bin\TortoiseGitBlame.exe
-C:\Program Files\TortoiseGit\bin\TortoiseGitIDiff.exe
-C:\Program Files\TortoiseGit\bin\TortoiseGitMerge.exe
-C:\Program Files\TortoiseGit\bin\TortoiseGitPlink.exe
-C:\Program Files\TortoiseGit\bin\TortoiseGitProc.exe
-C:\Program Files\TortoiseGit\bin\TortoiseGitUDiff.exe
-C:\Program Files\TortoiseGit\bin\TortoisePlink.exe
-C:\develop\my_script\batch\mls.bat
-C:\Ruby27-x64\bin\ruby.exe
-C:\Ruby27-x64\bin\rubyw.exe
-C:\Ruby27-x64\bin\oauth.bat
-C:\Ruby27-x64\bin\twurl.bat
-C:\Ruby27-x64\bin\bundle.cmd
-C:\Ruby27-x64\bin\bundler.cmd
-C:\Ruby27-x64\bin\erb.cmd
-C:\Ruby27-x64\bin\gem.cmd
-C:\Ruby27-x64\bin\irb.cmd
-C:\Ruby27-x64\bin\rake.cmd
-C:\Ruby27-x64\bin\rdoc.cmd
-C:\Ruby27-x64\bin\ri.cmd
-C:\Ruby27-x64\bin\ridk.cmd
-C:\Ruby27-x64\bin\setrbvars.cmd
-C:\Users\nogam\AppData\Local\Microsoft\WindowsApps\GameBarElevatedFT_Alias.exe
-C:\Users\nogam\AppData\Local\Microsoft\WindowsApps\monitorian.exe
-C:\Users\nogam\AppData\Local\atom\bin\apm.cmd
-C:\Users\nogam\AppData\Local\atom\bin\atom.cmd
-C:\Users\nogam\AppData\Roaming\npm\eslint.cmd
-C:\Users\nogam\AppData\Local\Microsoft\WindowsApps\GameBarElevatedFT_Alias.exe
-C:\Users\nogam\AppData\Local\Microsoft\WindowsApps\monitorian.exe
-C:\Users\nogam\AppData\Local\Programs\Microsoft VS Code\bin\code.cmd

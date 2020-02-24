@@ -1,3 +1,0 @@
-wname(with name)
-
-環境変数PATHに存在するPATHEXTの拡張子を持つファイルの一覧を生成します。
