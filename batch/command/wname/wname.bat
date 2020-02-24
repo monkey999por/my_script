@@ -8,6 +8,13 @@ rem あとでpathとpathextはファイル整形して読み込むようにする
 
 rem 書き出し先 default %userprofile%\Downloads\result_wname.txt
 
+if "%1"=="--help" (
+ echo.
+ echo 環境変数pathにあるpathextの拡張子のファイル（＝名前だけで実行可能なファイル）の一覧を作成します
+ echo 出力先：%cd%\output\temp_wname.txt
+ exit /b 0
+)
+
 setlocal  ENABLEDELAYEDEXPANSION
 for /f "delims=" %%f in (.\input\my_path.txt) do (
  set "my_path=%%f"
