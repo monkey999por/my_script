@@ -21,7 +21,14 @@ if "%1"=="" (
 
 if "%1"=="--help" (
  echo 実行可能コマンド一覧
- dir /b %command_path%
+ echo 詳細はcommand --helpで確認してください
+ echo.
+ setlocal ENABLEDELAYEDEXPANSION
+ for /f "tokens=1,2 delims==" %%a in (%command_help%) do (
+  echo [%%a]  %%b
+  echo.
+ )
+ endlocal
  exit /b 0
 )
 
