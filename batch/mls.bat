@@ -19,6 +19,13 @@ if "%1"=="" (
  exit /b 1
 )
 
+if "%1"=="--help" (
+ echo 実行可能コマンド一覧
+ dir /b %command_path%
+ exit /b 0
+)
+
+
 setlocal
 rem コマンド存在チェック
 set "my_temp=%temp%\temp_mls.txt"
