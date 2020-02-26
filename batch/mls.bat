@@ -23,12 +23,27 @@ if "%1"=="--help" (
  echo 実行可能コマンド一覧
  echo 詳細はcommand --helpで確認してください
  echo.
+ 
+ rem dirで検索出来たら出力する
+ set "mls_list=%temp%mls_list.txt"
+ dir /b %command_path% > %mls_list%
+
  setlocal ENABLEDELAYEDEXPANSION
  for /f "tokens=1,2 delims==" %%a in (%command_help%) do (
-  echo [%%a]  %%b
-  echo.
+  set "command_name=%%a"
+  set "description=%%b"
+  findstr /i /x /l	"!command_name!" %mls_list% > nul
+  echo エラーレベル%errorlevel%
+  if errorlevel 0 (
+   echo [!command_name!]   !description!
+   echo.
+  ) else (
+   echo やばい	
+  )
+   
  )
  endlocal
+ del %mls_list%
  exit /b 0
 )
 
