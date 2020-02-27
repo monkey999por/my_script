@@ -67,8 +67,13 @@ for /f %%f in (%my_temp1%) do (
  for /f "tokens=1* delims= " %%a in ('help') do (
   if "!command_name!"=="%%a" (
    echo "書き出し中 -> !command_name!"
-   echo ^<div class=overview^>^<strong id=_%%a^>%%a^</strong^>^&emsp;^&emsp;[%%b]^</div^> >> %result%
+   echo ^<div^> >> %result%
+   echo ^<div^>^<strong id=_%%a^>%%a^</strong^> >> %result%
+   echo ^<span id=overview_%%a%%^>^&emsp;^&emsp;[%%b] >> %result%
+   echo ^</span^> >> %result%
    call :Details %%a
+   echo ^</div^> >> %result%
+   echo ^</div^> >> %result%
   )
  )
 )
@@ -80,15 +85,17 @@ rem "コマンドの詳細を書き出し"
 setlocal ENABLEDELAYEDEXPANSION
 if not "%1"=="" (
  echo ^<div id=%1 class=detail^> >> %result%
+ echo ^&emsp;^&emsp;--------------------------------------------------------^<br^> >> %result%
  for /f "delims=" %%f in ('help %1') do (
   echo ^&emsp;^&emsp;%%f^<br^> >> %my_temp2%
  )
  type %my_temp2% >> %result%
+ echo ^&emsp;^&emsp;--------------------------------------------------------^<br^> >> %result%
  echo ^</div^> >> %result%
  echo. >> %result%
 )
 endlocal
-del %my_temp2%
+del %my_temp2% 2>nul
 exit /b 0
 
 :EndProc
@@ -98,6 +105,9 @@ echo d | xcopy result %userprofile%\Downloads\result /Q /H >nul 2>&1
 rem "後処理"
 rmdir /s /q my_temp 2>nul
 del %result% 2>nul
+
+echo helpの書き出しが終了しました。
+echo 書き出し先 -^> %userprofile%\Downloads\result\result.html
 
 exit /b 0
 
