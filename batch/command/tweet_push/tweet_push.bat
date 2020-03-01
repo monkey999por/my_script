@@ -4,6 +4,11 @@ setlocal ENABLEDELAYEDEXPANSION
 rem git push + ツイッターに投稿する
 rem 前提：git.exeにパスを通す、cmd.exeから本バッチを起動
 
+if "%1"=="--help" ( 
+ call %common_help% %~n0 --help
+ exit /b 0
+)
+
 rem ツイート内容 
 rem url(remote_repository)
 rem branch

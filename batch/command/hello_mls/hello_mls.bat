@@ -1,6 +1,10 @@
 @echo off
 setlocal
 
+if "%1"=="--help" (
+ call %common_help% %~n0 --help
+ exit /b 0 
+)
 
 echo ==Hello My Local Script=============Hello My Local Script=============Hello
 echo.

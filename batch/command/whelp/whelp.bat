@@ -4,7 +4,7 @@ pushd "%~dp0"
 
 
 if "%1"=="--help" (
- echo cmd標準helpコマンドをhtml形式で出力します
+ call %common_help% %~n0 --help
  exit /b 0
 ) else if not "%1"=="" (
  echo このコマンドは--helpオプションのみサポートしています

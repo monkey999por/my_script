@@ -14,6 +14,11 @@ if "%1"=="" (
  
 )
 
+if "%1"=="--help" ( 
+ call %common_help% %~n0 --help
+ exit /b 0
+)
+
 if "%1"=="--call" (
  call :Test1
  echo èIÇÌÇË

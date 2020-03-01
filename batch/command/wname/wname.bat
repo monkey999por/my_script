@@ -15,8 +15,7 @@ set "wname=.\output\wname.txt"
 @del %wname% 2>nul
 
 if "%1"=="--help" (
- echo.
- echo 環境変数pathにあるpathextの拡張子のファイル（＝名前だけで実行可能なファイル）の一覧を作成します
+ call %common_help% %~n0 --help
  echo 出力先：%cd%\output\temp_wname.txt
  exit /b 0
 )
