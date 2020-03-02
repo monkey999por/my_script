@@ -16,7 +16,7 @@ for /f "tokens=1,2 delims==" %%a in (%command_help%) do (
   )
  ) else if "%1"=="--help" (
   echo 実行可能コマンド一覧
-  echo 詳細はcommand --helpで確認してください
+  echo 詳細はmls $command --helpで確認してください
   echo.
   for /f "tokens=1,2 delims==" %%a in (%command_help%) do (
    echo [%%a]  %%b

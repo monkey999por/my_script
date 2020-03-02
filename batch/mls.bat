@@ -23,6 +23,7 @@ rem help表示
 if "%1"=="--help" (
  call %common_help% %1
  cd %this%
+ exit /b 0
 )
 
 rem 開発用。指定したコマンド名でひな形を作成する
