@@ -1,4 +1,4 @@
-# my_loca_script (mls)
+# My Loca Script (mls)
 
 <font size="5">**■mlsとは？**</font><br>
 ・windows cmdとwindows powershellを使用した拡張コマンド群<br>
