@@ -22,7 +22,7 @@ if not "%errorlevel%"=="0" (
 )
 
 rem tempファイル
-set "temp_file_name=%temp%\tweet_push.txt"
+set "temp_file_name=%mls_temp%\tweet_push.txt"
 
 rem url(remote_repository)取得
 rem とりあえず originだけ・・・

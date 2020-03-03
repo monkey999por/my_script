@@ -6,6 +6,9 @@ set internal_path=%current_path%\internal_command
 set command_path=%current_path%\command
 set command_help=%current_path%\props\command.help
 
+rem 一時ファイルのパス。基本的にすべての一時ファイルはここに出る
+set "mls_temp=%current_path%\mls_temp"
+
 rem hello ページ
 set start_page=%current_path%\command\hello_mls\hello_mls.bat
 

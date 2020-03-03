@@ -92,9 +92,14 @@ rem ---------------------------------------
 rem ここからカスタムコマンド実行の本処理です
 rem ---------------------------------------
 
+rem 初期処理
+rmdir /s /q %mls_temp%
+mkdir %mls_temp% 2>nul
+
+
 setlocal
 rem コマンド存在チェック
-set "my_temp=%temp%\temp_mls.txt"
+set "my_temp=%mls_temp%\temp_mls.txt"
 dir /b %command_path% > %my_temp%
 	
 setlocal ENABLEDELAYEDEXPANSION
@@ -115,10 +120,10 @@ exit /b 1
 rem カスタムコマンド実行
 rem 引数を一度ファイルに書き出して、それをforステートメントに渡す
 rem ⇒こうしないとfor文の引数の関係でダブルクォーテーション付き引数がうまく認識されない
-del %temp%\mls_run.txt
-echo %* > %temp%\mls_run.txt
+del %mls_temp%\mls_run.txt 2>nul
+echo %* > %mls_temp%\mls_run.txt
 
-for /f "tokens=1* delims= " %%i in (%temp%\mls_run.txt) do (
+for /f "tokens=1* delims= " %%i in (%mls_temp%\mls_run.txt) do (
  if "%is_exist_command%"=="true" (
   call %command_path%\%%i\%%i.bat %%j  
  )
