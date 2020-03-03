@@ -41,20 +41,20 @@ cmd.exeの標準のhelpが全量表示されますね！<br>
 **〇新規カスタムコマンドを作成したい**<br>
 `$mls --new [command_name]`を指定してください。<br>
 下記のものが作成されます。<br>
-1. ./batch/command/[command_name]/[command_name].bat<br>
-2. ./batch/command/[command_name]/[command_name]_test.bat<br>
+1. ./My_Local_Script/command/[command_name]/[command_name].bat<br>
+2. ./My_Local_Script/command/[command_name]/[command_name]_test.bat<br>
 
 1にカスタムコマンドを実装し、2にテストコードを書きます。<br>
-それと、helpファイルの更新が必要です。`./batch/props/command.help`に新規追加したコマンドの説明を書いてください<br>
+それと、helpファイルの更新が必要です。`./My_Local_Script/props/command.help`に新規追加したコマンドの説明を書いてください<br>
 
 
 **〇カスタムコマンドのテストがしたい**<br>
  `$mls [command_name] --test`でテストが実行できます。<br>
-`./batch/command/[command_name]/[command_name]_test.bat`が実行されます。
+`./My_Local_Script/command/[command_name]/[command_name]_test.bat`が実行されます。
 
 **〇mlsの開発で考えなければいけないことは？**<br>
 基本的に下記の点にだけ注意すれば、あとはいい感じにつくちゃってOKです。
-1. mlsは、実行時に`batch\props\env_path_set.bat`を読み込みます
-2. `$mls --help`は`batch\props\command.help`を表示します。
-3. `$mls [command_help] --help`で詳細コマンドを表示する時は、一行目に`batch\props\command.help`の中の[command_help]に該当する内容を表示します。それ以外は適当に作ってください
+1. mlsは、実行時に`My_Local_Script\props\env_path_set.bat`を読み込みます
+2. `$mls --help`は`My_Local_Script\props\command.help`を表示します。
+3. `$mls [command_help] --help`で詳細コマンドを表示する時は、一行目に`My_Local_Script\props\command.help`の中の[command_help]に該当する内容を表示します。それ以外は適当に作ってください
 4. mlsは、現在のディレクトリをカレントディレクトリとします。
