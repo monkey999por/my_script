@@ -4,7 +4,7 @@ rem カレントディレクトリ
 pushd "%~dp0" 
 
 rem 環境変数(主にパス系)設定
-call .\mls_props\env_path_set.bat
+call .\mls_props\set_mls_structure.bat
 
 rem $mls %command_name% &command_option...&
 rem args
