@@ -9,7 +9,7 @@ rem ˆø”
 rem %1: group
 rem %2: key(prop)
 
-set "main_properties_path=.\..\..\props\main.properties"
+set "main_properties_path=%mls_props%\main.properties"
 set "group=%1"
 set "key=%2"
 

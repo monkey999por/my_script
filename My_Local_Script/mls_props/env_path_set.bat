@@ -5,6 +5,7 @@ rem ディレクトリ構成です。ディレクトリ構成を変更する場合はここを変えれば良いはず
 set current_path=C:\develop\my_script\My_Local_Script
 set mls_batch=%current_path%\mls_batch
 set mls_internal_batch=%current_path%\mls_internal_batch
+set mls_props=%current_path%\mls_props
 set mls_temp=%current_path%\mls_temp
 
 set command_help=%current_path%\props\command.help
