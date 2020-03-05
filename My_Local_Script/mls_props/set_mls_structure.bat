@@ -6,21 +6,20 @@ set current_path=C:\develop\my_script\My_Local_Script
 rem current_path直下
 set mls_props=%current_path%\mls_props
 set mls_temp=%current_path%\mls_temp
+set mls_command=%current_path%\mls_command
+set mls_function=%current_path%\mls_function
 
-
-set mls_cmd=%current_path%\mls_cmd
-rem mls_cmd直下
-set mls_batch=%mls_cmd%\mls_batch
-set mls_internal_batch=%mls_cmd%\mls_internal_batch
 
 
 set command_help=%mls_props%\command.help
 
+
+
 rem hello ページ
-set start_page=%mls_batch%\hello_mls\hello_mls.bat
+set start_page=%mls_command%\hello_mls\hello_mls.bat
 
 rem 共通エラーハンドリング
-set "error_h=%mls_internal_batch%\error\error_handling.bat"
+set "error_h=%mls_function%\error\error_handling.bat"
 
 rem 共通help出力
-set "common_help=%mls_internal_batch%\help\common_help.bat"
+set "common_help=%mls_function%\help\common_help.bat"

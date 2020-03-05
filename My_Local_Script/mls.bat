@@ -35,7 +35,7 @@ if "%1"=="--new" (
  )
  
  setlocal ENABLEDELAYEDEXPANSION
- for /f %%c in ('dir /b %mls_batch%') do (
+ for /f %%c in ('dir /b %mls_command%') do (
   if "%2"=="%%c" (
    echo すでに同名コマンドが存在します。別の名前を指定してください。
    endlocal & cd %this%
@@ -48,14 +48,14 @@ if "%1"=="--new" (
  echo "ひな形を作成します：%2"
  
  rem フォルダを作成する
- mkdir %mls_batch%\%2
+ mkdir %mls_command%\%2
  
  rem ファイルを配置する
- copy %current_path%\ひな形.bat %mls_batch%\%2\%2.bat
+ copy %current_path%\ひな形.bat %mls_command%\%2\%2.bat
  
- copy %current_path%\ひな形.bat %mls_batch%\%2\%2_test.bat
+ copy %current_path%\ひな形.bat %mls_command%\%2\%2_test.bat
  
- echo call %mls_batch%\%2\%2.bat >> %mls_batch%\%2\%2_test.bat
+ echo call %mls_command%\%2\%2.bat >> %mls_command%\%2\%2_test.bat
  
  rem command.helpにhelpを追加する
  rem 内容は"command.helpに説明が書いてありません"
@@ -75,9 +75,9 @@ if "%1"=="--test" (
  )
  
  setlocal ENABLEDELAYEDEXPANSION
- for /f %%c in ('dir /b %mls_batch%') do (
+ for /f %%c in ('dir /b %mls_command%') do (
   if "%2"=="%%c" (
-   call %mls_batch%\%2\%2_test.bat
+   call %mls_command%\%2\%2_test.bat
    endlocal & cd %this%
    exit /b 1
   ) 
@@ -100,7 +100,7 @@ mkdir %mls_temp% 2>nul
 setlocal
 rem コマンド存在チェック
 set "my_temp=%mls_temp%\temp_mls.txt"
-dir /b %mls_batch% > %my_temp%
+dir /b %mls_command% > %my_temp%
 	
 setlocal ENABLEDELAYEDEXPANSION
 for /f %%i in (%my_temp%) do (
@@ -125,7 +125,7 @@ echo %* > %mls_temp%\mls_run.txt
 
 for /f "tokens=1* delims= " %%i in (%mls_temp%\mls_run.txt) do (
  if "%is_exist_command%"=="true" (
-  call %mls_batch%\%%i\%%i.bat %%j  
+  call %mls_command%\%%i\%%i.bat %%j  
  )
 )
 
