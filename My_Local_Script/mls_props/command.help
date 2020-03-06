@@ -1,5 +1,0 @@
-hello_mls=mlsのスタートページを表示します
-sample=サンプルのコマンドです。引数を渡すとエコーします
-tweet_push=git pushと同時に編集したメッセージをツイートします。
-wname=名前のみで実行可能なものの一覧を出力します
-whelp=cmd標準helpコマンドをhtml形式で出力します

@@ -8,18 +8,9 @@ set mls_props=%current_path%\mls_props
 set mls_temp=%current_path%\mls_temp
 set mls_command=%current_path%\mls_command
 set mls_function=%current_path%\mls_function
-
-
-
-set command_help=%mls_props%\command.help
-
+set mls_base=%current_path%\mls_base
 
 
 rem hello ページ
 set start_page=%mls_command%\hello_mls\hello_mls.bat
 
-rem 共通エラーハンドリング
-set "error_h=%mls_function%\error\error_handling.bat"
-
-rem 共通help出力
-set "common_help=%mls_function%\help\common_help.bat"

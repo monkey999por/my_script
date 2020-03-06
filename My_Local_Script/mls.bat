@@ -1,4 +1,5 @@
 @echo off
+
 rem カレントディレクトリ
 @set "this=%cd%"
 pushd "%~dp0" 
@@ -6,29 +7,35 @@ pushd "%~dp0"
 rem 環境変数(主にパス系)設定
 call .\mls_props\set_mls_structure.bat
 
-rem $mls %command_name% &command_option...&
-rem args
-rem command
-rem options...(for %command%)
-
 rem 引数チェック
 if "%1"=="" (
  call %start_page%
- echo コマンド名を指定してください
+ echo $mls --helpで使用可能なコマンドの一覧が表示されます
  cd %this%
  exit /b 1
 )
 
 rem help表示
-if "%1"=="--help" (
- call %common_help% %1
+if "%1"=="--help" ( 
+ setlocal ENABLEDELYEDEXPANSION
+ for /f "delims=" %%a in ('dir /b %mls_command%') do (
+  echo.
+  echo [%%a]
+  for /f "delims=" %%h in ('type %mls_command%\%%a\help\%%a.overview') do (
+   echo      %%h
+  )
+  echo.
+ )
+ endlocal 
  cd %this%
  exit /b 0
 )
 
+
 rem 開発用。指定したコマンド名でひな形を作成する
+rem ex. $mls --new [--shell or --batch] command_name
 if "%1"=="--new" (
- if "%2"=="" (
+ if "%3"=="" (
   echo コマンド名を指定してください。
   cd %this%
   exit /b 1
@@ -36,7 +43,7 @@ if "%1"=="--new" (
  
  setlocal ENABLEDELAYEDEXPANSION
  for /f %%c in ('dir /b %mls_command%') do (
-  if "%2"=="%%c" (
+  if "%3"=="%%c" (
    echo すでに同名コマンドが存在します。別の名前を指定してください。
    endlocal & cd %this%
    exit /b 1
@@ -44,22 +51,34 @@ if "%1"=="--new" (
  )
  endlocal
  
- echo 開発用です。
- echo "ひな形を作成します：%2"
+ rem バッチかシェルか
+ setlocal ENABLEDELAYEDEXPANSION
+ if "%2"=="--batch" (
+  set "mls_ext=.bat"
+ ) else if "%2"=="--shell" (
+  set "mls_ext=.ps1"
+ ) else (
+  echo args[2]が不正です。--batch or --shell を指定してください。
+  endlocal & cd %this% 
+  exit /b 0
+ )
+ 
+ echo "ひな形を作成します：%3%ext%
  
  rem フォルダを作成する
- mkdir %mls_command%\%2
+ mkdir %mls_command%\%3
  
  rem ファイルを配置する
- copy %current_path%\ひな形.bat %mls_command%\%2\%2.bat
+ copy %mls_base%\base%mls_ext% %mls_command%\%3\%3!mls_ext!
+ copy %mls_base%\base%mls_ext% %mls_command%\%3\%3_test!mls_ext!
+ break > %mls_command%\%3\help\%3.overview
+ break > %mls_command%\%3\help\%3.detail
  
- copy %current_path%\ひな形.bat %mls_command%\%2\%2_test.bat
- 
- echo call %mls_command%\%2\%2.bat >> %mls_command%\%2\%2_test.bat
- 
- rem command.helpにhelpを追加する
- rem 内容は"command.helpに説明が書いてありません"
- echo %2=command.helpに説明が書いてありません >> %command_help%
+ if "%2"=="--batch" (
+  echo call %mls_command%\%3\%3!mls_ext! >> %mls_command%\%3\%3_test!mls_ext!
+ ) else if "%2"=="--shell" (
+  echo powershell -NoProfile -ExecutionPolicy Unrestricted .\%mls_command%\%3\%3!mls_ext! > %mls_command%\%3\%3_test!mls_ext!
+ )
  
  echo 正常終了しました
  cd %this%
