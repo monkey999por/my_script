@@ -52,33 +52,38 @@ if "%1"=="--new" (
  endlocal
  
  rem バッチかシェルか
+ setlocal ENABLEDELAYEDEXPANSION
  if "%2"=="--batch" (
   set "mls_ext=.bat"
  ) else if "%2"=="--shell" (
   set "mls_ext=.ps1"
  ) else (
   echo args[2]が不正です。--batch or --shell を指定してください。
-  endlocal & cd %this% 
+  cd %this% 
   exit /b 0
  )
  
- echo "ひな形を作成します：%3%mls_ext%
+ echo "ひな形を作成します：%3!mls_ext!
  
  rem フォルダを作成する
  mkdir %mls_command%\%3
  
  rem ファイルを配置する
- copy %mls_base%\base%mls_ext% %mls_command%\%3\%3%mls_ext%
- copy %mls_base%\base%mls_ext% %mls_command%\%3\%3_test%mls_ext%
+ copy %mls_base%\base!mls_ext! %mls_command%\%3\%3!mls_ext!
+ copy %mls_base%\base!mls_ext! %mls_command%\%3\%3_test!mls_ext!
+ 
+ echo %mls_base%\base!mls_ext! %mls_command%\%3\%3!mls_ext!
+ 
  mkdir %mls_command%\%3\help
  break > %mls_command%\%3\help\%3.overview
  break > %mls_command%\%3\help\%3.detail
  
  if "%2"=="--batch" (
-  echo call %mls_command%\%3\%3%mls_ext% >> %mls_command%\%3\%3_test%mls_ext%
+  echo call %mls_command%\%3\%3!mls_ext! >> %mls_command%\%3\%3_test!mls_ext!
  ) else if "%2"=="--shell" (
-  echo powershell -NoProfile -ExecutionPolicy Unrestricted %mls_command%\%3\%3%mls_ext% > %mls_command%\%3\%3_test%mls_ext%
+  echo powershell -NoProfile -ExecutionPolicy Unrestricted %mls_command%\%3\%3!mls_ext! > %mls_command%\%3\%3_test!mls_ext!
  )
+ endlocal
  echo 正常終了しました
  cd %this%
  exit /b 0
