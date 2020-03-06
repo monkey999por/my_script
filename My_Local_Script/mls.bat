@@ -79,7 +79,6 @@ if "%1"=="--new" (
  ) else if "%2"=="--shell" (
   echo powershell -NoProfile -ExecutionPolicy Unrestricted %mls_command%\%3\%3%mls_ext% > %mls_command%\%3\%3_test%mls_ext%
  )
- 
  echo 正常終了しました
  cd %this%
  exit /b 0
@@ -88,19 +87,15 @@ if "%1"=="--new" (
 rem カスタムコマンドのテスト実行用
 if "%1"=="--test" (
  if "%2"=="" (
-  echo コマンド名を指定してください。
+  echo コマンド名を指定してください。使用できるコマンドは $mls --help で確認できます
   cd %this%
   exit /b 1
  )
- 
- setlocal ENABLEDELAYEDEXPANSION
- for /f %%c in ('dir /b %mls_command%') do (
-  if "%2"=="%%c" (
-   call %mls_command%\%2\%2_test.bat
-   endlocal & cd %this%
-   exit /b 1
-  ) 
- )
+
+ rem .batと.ps1のどちらかが必ず失敗するけど、別に実害ないし、、、
+ call %mls_command%\%2\%2_test.bat 2>nul
+ call powershell -NoProfile -ExecutionPolicy Unrestricted %mls_command%\%2\%2_test.ps1 2>nul
+
  endlocal
  cd %this%
  exit /b 0
