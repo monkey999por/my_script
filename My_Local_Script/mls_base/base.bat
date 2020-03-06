@@ -2,12 +2,12 @@
 setlocal
 pushd "%~dp0"
 
-echo default dayo
-
-
 rem ã§í helpèoóÕ
 if "%1"=="--help" (
- call %common_help% %~n0 --help
+ type .\help\%~n0.overview
+ echo.
+ echo.
+ type .\help\%~n0.detail
+ echo.
  exit /b 0
 )
-
