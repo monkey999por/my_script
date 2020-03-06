@@ -9,8 +9,20 @@ call .\mls_props\set_mls_structure.bat
 
 rem 引数チェック
 if "%1"=="" (
+ echo.
+ echo.
  call %start_page%
- echo $mls --helpで使用可能なコマンドの一覧が表示されます
+ echo.
+ echo.
+ echo 使用できるオプション: 使い方 -> $mls --option
+ echo  --help : 使用可能なコマンドの一覧が表示されます。コマンドの詳細は $mls command --help を参照してください
+ echo.
+ echo  --new --batch comand または --new --shell command : 
+ echo  新規コマンドを作成します。.\mls_command直下にディレクトリが作成され、必要なファイルはすべてその配下に作成されます
+ echo.
+ echo  --test command : コマンドのテストを行います。テストコードは--newオプション使用時に、コマンド格納ディレクトリと同階層に作成されます
+ echo.
+ echo.
  cd %this%
  exit /b 1
 )
