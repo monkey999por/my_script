@@ -101,7 +101,6 @@ if "%1"=="--test" (
  call %mls_command%\%2\%2_test.bat 2>nul
  call powershell -NoProfile -ExecutionPolicy Unrestricted %mls_command%\%2\%2_test.ps1 2>nul
 
- endlocal
  cd %this%
  exit /b 0
 )
@@ -115,24 +114,19 @@ rem 初期処理
 rmdir /s /q %mls_temp%
 mkdir %mls_temp% 2>nul
 
-
-setlocal
 rem コマンド存在チェック
-set "my_temp=%mls_temp%\temp_mls.txt"
-dir /b %mls_command% > %my_temp%
-	
 setlocal ENABLEDELAYEDEXPANSION
-for /f %%i in (%my_temp%) do (
+for /f %%i in ('dir /b %mls_command%') do (
  if "%1"=="%%i" (
   set "is_exist_command=true"
   call :Run %*
-  endlocal & endlocal & cd %this%
+  endlocal & cd %this%
   exit /b 0
  ) 
 )
 
 echo コマンドが存在しません
-endlocal & endlocal & cd %this%
+endlocal & cd %this%
 exit /b 1
 
 :Run
@@ -144,8 +138,9 @@ echo %* > %mls_temp%\mls_run.txt
 
 for /f "tokens=1* delims= " %%i in (%mls_temp%\mls_run.txt) do (
  if "%is_exist_command%"=="true" (
-  call %mls_command%\%%i\%%i.bat %%j  
+  call %mls_command%\%%i\%%i.bat %%j 2>nul
+  call powershell -NoProfile -ExecutionPolicy Unrestricted %mls_command%\%%i\%%i.ps1 %%j 2>nul
  )
 )
 
-endlocal & endlocal & cd %this%
+endlocal & cd %this%
