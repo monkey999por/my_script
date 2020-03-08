@@ -91,9 +91,9 @@ if "%1"=="--new" (
  break > %mls_command%\%3\help\%3.detail
  
  if "%2"=="--batch" (
-  echo call %mls_command%\%3\%3!mls_ext! >> %mls_command%\%3\%3_test!mls_ext!
+  echo call ^%%mls_command%%\%3\%3!mls_ext! >> %mls_command%\%3\%3_test!mls_ext!
  ) else if "%2"=="--shell" (
-  echo powershell -NoProfile -ExecutionPolicy Unrestricted %mls_command%\%3\%3!mls_ext! > %mls_command%\%3\%3_test!mls_ext!
+  echo powershell -NoProfile -ExecutionPolicy Unrestricted %%mls_command%%\%3\%3!mls_ext! > %mls_command%\%3\%3_test!mls_ext!
  )
  endlocal
  echo ³íI—¹‚µ‚Ü‚µ‚½
