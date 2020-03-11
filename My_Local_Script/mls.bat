@@ -14,7 +14,7 @@ if "%1"=="" (
  call %start_page%
  echo.
  echo.
- echo 使用できるオプション: 使い方 -> $mls --option
+ echo 使用できるオプション: 使い方 -^> $mls --option
  echo  --help : 使用可能なコマンドの一覧が表示されます。コマンドの詳細は $mls command --help を参照してください
  echo.
  echo  --new --batch comand または --new --shell command : 
