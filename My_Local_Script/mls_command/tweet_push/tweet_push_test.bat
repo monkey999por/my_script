@@ -11,3 +11,4 @@ if "%1"=="--help" (
  echo.
  exit /b 0
 )
+call %mls_command%\tweet_push\tweet_push.bat 
