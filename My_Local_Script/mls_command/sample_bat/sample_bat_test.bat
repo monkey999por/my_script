@@ -11,4 +11,4 @@ if "%1"=="--help" (
  echo.
  exit /b 0
 )
-call %mls_command%\sample\sample.bat 
+call %mls_command%\sample_bat\sample_bat.bat 

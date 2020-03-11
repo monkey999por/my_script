@@ -75,7 +75,7 @@ if "%1"=="--new" (
   exit /b 0
  )
  
- echo "ひな形を作成します：%3!mls_ext!
+ echo "ひな形を作成します：%3!mls_ext!"
  
  rem フォルダを作成する
  mkdir %mls_command%\%3
