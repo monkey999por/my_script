@@ -29,7 +29,7 @@ if "%1"=="" (
 
 rem help•\Ž¦
 if "%1"=="--help" ( 
- setlocal ENABLEDELYEDEXPANSION
+ setlocal ENABLEDELAYEDEXPANSION
  for /f "delims=" %%a in ('dir /b %mls_command%') do (
   echo.
   echo [%%a]
