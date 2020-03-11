@@ -60,7 +60,7 @@ if not "%temp_file_name%"=="" (
 
 
 rem ツイート内容取得
-set /p tweet_status=ツイート内容：　
+set /p tweet_status=ツイート内容： 
 
 rem 確認メッセージ
 :IsTweetAndGitPushLabel
@@ -81,7 +81,6 @@ if "%is_tweet_and_git_push%"=="n" (
 )else (
  goto IsTweetAndGitPushLabel
 ) 
-
 
 :Git
 git push
