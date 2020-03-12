@@ -14,3 +14,5 @@ set mls_base=%current_path%\mls_base
 rem hello ページ
 set start_page=%mls_command%\hello_mls\hello_mls.bat
 
+rem ビルド用ルート
+set build_root=%userprofile%\Downloads\My_Local_Script

@@ -45,6 +45,12 @@ if "%1"=="--help" (
  exit /b 0
 )
 
+rem mlsのビルド。開発者用
+if "%1"=="--build" (
+ powershell -NoProfile -ExecutionPolicy Unrestricted %mls_function%\build\main.ps1
+ exit /b 0
+)
+
 
 rem 開発用。指定したコマンド名でひな形を作成する
 rem ex. $mls --new [--shell or --batch] command_name
